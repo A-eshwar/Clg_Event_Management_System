@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Events - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .mini-carousel {
+            max-width: 350px;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mini-carousel img {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
 </head>
-<body class="bg-light">
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">CampusEvents</a>
@@ -26,59 +44,68 @@
             </div>
         </div>
     </nav>
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/cam_events.jpg" class="d-block w-100" alt="College Fest" style="height: 450px; object-fit: cover;">
-                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-                    <h5>Annual Tech & Cultural Fest 2026</h5>
-                    <p>Unleash your potential and showcase your talent.</p>
-                </div>
+
+    <div class="container my-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-7 mb-4 mb-md-0 text-center text-md-start">
+                <h1 class="fw-bold mb-3">Annual Tech & Cultural Fest 2026</h1>
+                <p class="lead text-muted">Unleash your potential and showcase your talent. Code, collaborate, and
+                    conquer challenges in our National Level Hackathon.</p>
+                <a href="registration.html" class="btn btn-primary btn-lg px-5 shadow mt-3">Register Now</a>
             </div>
-            <div class="carousel-item">
-                <img src="images/hackathon2.jpg" class="d-block w-100" alt="Hackathon" style="height: 450px; object-fit: cover;">
-                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-                    <h5>National Level Hackathon</h5>
-                    <p>Code, collaborate, and conquer challenges.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-    <div class="container my-5 text-center">
-        <h2 class="mb-4">Event Highlights</h2>
-        <p class="lead text-muted">Join thousands of students competing across multiple technical and cultural horizons.</p>
-        <div class="row mt-4 g-4">
-            <div class="col-md-4">
-                <div class="p-3 border bg-white rounded shadow-sm">
-                    <h4>6+ Major Events</h4>
-                    <p>From coding battles to center-stage cultural performances.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-3 border bg-white rounded shadow-sm">
-                    <h4>Grand Prizes</h4>
-                    <p>Exciting cash rewards, certificates, and goodies to be won.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-3 border bg-white rounded shadow-sm">
-                    <h4>Networking</h4>
-                    <p>Connect with peers from top universities across the country.</p>
+            <div class="col-md-5 text-center">
+                <div id="heroCarousel" class="carousel slide mini-carousel" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/cam_events.jpg" class="d-block w-100" alt="College Fest">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/hackathon2.jpg" class="d-block w-100" alt="Hackathon">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
                 </div>
             </div>
         </div>
-        <div class="mt-5">
-            <a href="registration.html" class="btn btn-primary btn-lg px-5 shadow">Register Now</a>
+
+        <hr class="my-5">
+
+        <div class="text-center">
+            <h2 class="mb-4 fw-bold">Event Highlights</h2>
+            <p class="lead text-muted">Join thousands of students competing across multiple technical and cultural
+                horizons.</p>
+            <div class="row mt-4 g-4">
+                <div class="col-md-4">
+                    <div class="p-4 border bg-white rounded shadow-sm h-100">
+                        <h4 class="fw-bold">6+ Major Events</h4>
+                        <p class="text-muted mb-0">From coding battles to center-stage cultural performances.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border bg-white rounded shadow-sm h-100">
+                        <h4 class="fw-bold">Grand Prizes</h4>
+                        <p class="text-muted mb-0">Exciting cash rewards, certificates, and goodies to be won.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border bg-white rounded shadow-sm h-100">
+                        <h4 class="fw-bold">Networking</h4>
+                        <p class="text-muted mb-0">Connect with peers from top universities across the country.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -88,4 +115,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
